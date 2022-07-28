@@ -1,0 +1,132 @@
+@import "../../scss/variables";
+
+.comments {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper {
+    padding-top: 60px;
+  }
+
+  .swiper-slide-shadow-left, .swiper-slide-shadow-right {
+    border-radius: 32px;
+  }
+
+
+  &__background {
+    padding: 50px 0 95px;
+    background-color: $black;
+  }
+
+  &__card {
+    position: relative;
+    padding: 80px 30px 40px;
+    text-align: center;
+    background-color: #464646;
+    border-radius: 32px;
+
+    .card-title {
+      font-size: 28px;
+      line-height: 33.6px;
+    }
+
+    .card-subtitle {
+      margin-top: 3px;
+      margin-bottom: 26px;
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+
+    .card-paragraph {
+      line-height: 19.2px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .card-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .comments{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .comments {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    .swiper {
+      padding: 60px 75px 0;
+    }
+
+    &__background {
+      padding: 40px 0 25px;
+    }
+
+    .swiper-pagination {
+      position: static;
+      margin-top: 24px;
+      display: block;
+    }
+
+    &__card {
+      .card-title {
+        font-size: 32px;
+        line-height: 38.4px;
+      }
+
+      .card-subtitle {
+        margin: 12px 0 19px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .card-paragraph {
+        font-size: 18px;
+        line-height: 21.6px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .comments {
+    .swiper {
+      padding: 60px 16px 0;
+
+      &__card {
+        .card-title {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        .card-subtitle {
+          margin: 12px 0 19px;
+          font-size: 19.2px;
+          line-height: 24px;
+        }
+
+        .card-paragraph {
+          font-size: 16px;
+          line-height: 19.2px;
+        }
+      }
+    }
+  }
+}

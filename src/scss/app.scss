@@ -1,0 +1,41 @@
+@import "fonts";
+@import "variables";
+@import "libs/normalize";
+
+body {
+  position: relative;
+  background-color: $background;
+  color: $white;
+}
+
+.container{
+  width: 100%;
+  max-width: $container-width;
+  padding: 0 44px;
+  margin: 0 auto;
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 81px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .title{
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .container{
+    padding: 0 15px;
+  }
+
+  .title{
+    font-size: 32px;
+    line-height: 39.14px;
+    margin-bottom: 30px;
+  }
+}

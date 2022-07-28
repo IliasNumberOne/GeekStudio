@@ -1,0 +1,215 @@
+@import "../../scss/variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  padding: 15px 0;
+  width: 100%;
+  background-color: $background;
+  z-index: 20;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__contact {
+    font-size: 16px;
+    color: $white;
+
+    padding: 16px 34px;
+    border: 1px solid $primaryGreen;
+    border-radius: 122px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .nav .active{
+    font-weight: 700;
+    color: $white;
+  }
+
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: capitalize;
+
+    &__link {
+      font-size: 18px;
+      color: #D2D2D2;
+
+      cursor: pointer;
+      padding: 5px 10px;
+      transition: all .15s ease-in;
+
+      &:hover {
+        font-weight: 700;
+        color: $white;
+      }
+    }
+  }
+
+  .translate {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    color: $white;
+    cursor: pointer;
+    transition: all .15s ease-in;
+
+    &__box {
+      background-color: $background;
+      border-radius: 8px;
+      border: 0;
+      color: $white;
+
+      .select-options {
+        background-color: $background;
+      }
+    }
+
+    &__popup {
+      position: absolute;
+      background: $background;
+      top: 40px;
+      border-radius: 8px;
+      transform: translateX(-35%);
+      z-index: 1;
+    }
+
+    &__item {
+      text-transform: capitalize;
+      padding: 8px 25px;
+      color: #D2D2D2;
+      transition: color .10s ease;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &__arrow {
+      width: 10px;
+      height: 10px;
+      color: $white;
+      transition: all .10s ease;
+    }
+  }
+
+  .hamburger-lines {
+    height: 26px;
+    width: 32px;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .line {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: $white;
+    }
+
+    .line1 {
+      transform-origin: 0 0;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .line2 {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .line3 {
+      transform-origin: 0 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+
+  .menu-items {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    top: 83.2px;
+    background-color: $black;
+    transform: translate(150%);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .header{
+    .nav, .header__contact{
+      display: none ;
+    }
+
+    .menu-items{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .translate{
+      flex: 1;
+      justify-content: right;
+      margin-right: 20px;
+    }
+
+    .translate__popup{
+      transform: translateX(10px);
+    }
+
+    .hamburger-lines{
+      display: flex !important;
+    }
+
+    .nav__link{
+      font-size: 28px;
+    }
+
+    &__contact{
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header{
+    padding: 15px 0;
+
+    &__logo{
+      width: 68px;
+      height: 35px;
+    }
+    .nav__link{
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &__contact{
+      font-size: 14px;
+    }
+
+    .hamburger-lines{
+      width: 26px;
+      height: 20px;
+    }
+
+    .translate{
+      font-size: 14px;
+    }
+
+    .menu-items{
+      height: 93%;
+      top: 67.6px;
+    }
+  }
+}
+

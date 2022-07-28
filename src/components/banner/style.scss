@@ -1,0 +1,137 @@
+@import '../../scss/variables';
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $black;
+  padding-top: 84px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+
+    .main-title {
+      font-size: 51px;
+      line-height: 61px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      line-height: 32px;
+
+      max-width: 500px;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 48px 0;
+    }
+
+    .btn-more {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+
+      color: $secondaryGray;
+      background-color: $primaryGreen;
+      border-radius: 122px;
+      padding: 16px 34px;
+
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner {
+    height: 75vh;
+    &__text {
+      flex: 1.4;
+
+      .main-title {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+        line-height: 32px;
+
+        margin: 28px 0;
+      }
+    }
+
+    &__lottie {
+      flex: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner {
+    height: 100vh;
+    padding-top: 67.6px;
+
+    .container {
+      height: 100%;
+    }
+
+    &__text {
+      flex: 0;
+
+      .main-title {
+        font-size: 32px;
+        line-height: 35px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+    }
+
+    &__inner {
+      height: 98%;
+      flex-direction: column-reverse;
+    }
+
+    &__lottie {
+      flex: 0;
+      max-width: 60%;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+  .banner {
+    height: auto;
+
+    &__text {
+      .title {
+        font-size: 21px;
+        line-height: 28px;
+      }
+
+      .subtitle {
+        margin: 15px 0;
+      }
+    }
+
+    .btn-more {
+      padding: 14px 24px;
+    }
+
+    &__inner {
+      padding-bottom: 15px;
+      gap: 0;
+    }
+
+    &__lottie {
+      max-width: 100%;
+    }
+  }
+}

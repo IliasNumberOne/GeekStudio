@@ -1,0 +1,138 @@
+@import "../../scss/variables";
+
+.our-team{
+  padding-top: 70px;
+  padding-bottom: 90px;
+
+  .swiper-slide-shadow-left, .swiper-slide-shadow-right {
+    border-radius: 24px;
+  }
+
+  .swiper-pagination {
+    margin-top: 25px;
+    position: static;
+  }
+
+  .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: #5A5A5A;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #939393;
+  }
+
+
+  .team-card{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    min-height: 375px;
+    height: 404px;
+    padding: 0 10px 16px;
+    text-align: center;
+    border-radius: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__title{
+      font-size: 22px;
+      line-height: 28.8px;
+    }
+
+    &__subtitle{
+      color: rgba(255, 255, 255, 0.8);
+      margin-right: 8px;
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+  }
+
+  .swiper-inner{
+    position: relative;
+
+    .arrow{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: $white;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .arrow.right{
+      left: 100%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .our-team{
+    padding-top: 60px;
+    padding-bottom: 100px;
+
+    .team-card{
+      height: 500px;
+      min-height: 300px;
+
+      &__title{
+        font-size: 19px;
+        line-height: 24px;
+      }
+
+      &__subtitle{
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+    }
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  .our-team{
+
+    .swiper-inner{
+      .arrow{
+        display: flex;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .our-team{
+    .team-card{
+      height: 390px;
+      max-height: 450px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .our-team{
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .our-team{
+    .team-card{
+      max-height: 320px;
+    }
+  }
+}

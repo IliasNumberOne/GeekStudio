@@ -1,0 +1,135 @@
+@import "../../scss/variables";
+
+.portfolio {
+  padding-top: 50px;
+  padding-bottom: 70px;
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-slide {
+    border-radius: 35px;
+  }
+
+  .swiper-slide-shadow-left, .swiper-slide-shadow-right {
+    border-radius: 35px;
+  }
+
+
+  .container.portfolio-cont {
+    display: none;
+  }
+
+  .portfolio-card {
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 35px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -14.31%, rgba(0, 0, 0, 0.412127) 25.58%, rgba(0, 0, 0, 0.81) 88.32%);
+
+    .card-text {
+      width: 65%;
+
+      &__title {
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 48px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 32px;
+
+        margin: 17px 0 25px;
+      }
+
+      &__link {
+        display: inline-block;
+        padding: 16px 34px;
+        border: 1px solid $primaryGreen;
+        border-radius: 122px;
+      }
+    }
+
+    .card-img {
+      width: 25%;
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .portfolio {
+    .portfolio-card {
+      padding: 40px 40px 25px;
+
+      .card-text {
+        width: 70%;
+
+        &__title {
+          font-size: 32px;
+          line-height: 39.26px;
+        }
+
+        &__subtitle {
+          font-size: 16px;
+          margin: 15px 0 22px;
+        }
+
+        &__link {
+          font-size: 14px;
+          line-height: 17.12px;
+          padding: 13px 25px;
+        }
+      }
+
+      .card-img {
+        width: 27%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .swiper {
+    .swiper-pagination {
+      display: block;
+    }
+
+    .swiper-pagination-bullet {
+      opacity: 1;
+      background-color: #5A5A5A;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #939393;
+    }
+
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .portfolio {
+    .swiper-pagination {
+      margin-top: 18px;
+      position: static;
+    }
+
+    .portfolio-card {
+      border-radius: 10px;
+
+      .card-text {
+        width: 100%;
+      }
+
+      .card-img {
+        align-self: flex-start;
+      }
+    }
+  }
+}

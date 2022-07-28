@@ -1,0 +1,181 @@
+@import "../../scss/variables";
+
+.dev-stages {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  .stages_box {
+    overflow: hidden;
+    padding: 98px 0 23px;
+    width: 100%;
+    background-color: $black;
+    border-radius: 64px;
+  }
+
+  .last_line {
+    position: absolute;
+    top: 12px;
+    left: 63%;
+    background-color: $primaryGreen;
+  }
+
+
+  .stages__items {
+    padding: 0 43px;
+    display: flex;
+    align-items: flex-start;
+    gap: 3%;
+    //justify-content: space-between;
+  }
+
+  .circle {
+    width: 26px;
+    height: 28px;
+  }
+
+  .stage {
+    position: relative;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+    &__num {
+      margin-top: 46px;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 39.14px;
+      color: rgba(255, 255, 255, 0.2);;
+    }
+
+    &__title {
+      margin: 47px 0 28px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 33.6px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .dev-stages .container {
+    max-width: 1320px;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .dev-stages {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+    .stages_box {
+      padding-top: 77.4px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 21px;
+    }
+
+    .stage {
+
+      &__num {
+        margin-top: 35px;
+        font-size: 24px;
+        line-height: 29.35px;
+      }
+
+      &__title {
+        margin: 22.2px 0 18.8px;
+        font-size: 22.04px;
+        line-height: 26.45px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 25.19px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .dev-stages {
+    padding-top: 45.5px;
+    padding-bottom: 40px;
+    .stage__num{
+      margin-top: 0;
+    }
+
+    .circle {
+      width: 17px;
+      height: 17px;
+    }
+
+    .green-line {
+      background-color: $primaryGreen;
+    }
+
+    .stages_box_mob {
+      display: flex;
+      flex-direction: column;
+
+      .stage-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+
+        &__text{
+          width: 41%;
+
+
+
+        }
+
+        &__svg{
+          top: 0;
+          position: absolute;
+          height: 100%;
+          left: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+
+          .circle{
+            box-sizing: content-box;
+            padding: 8px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .dev-stages .stage__num {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .dev-stages .stage__title {
+    margin: 8px 0 11px;
+    font-size: 16px;
+    line-height: 19.57px;
+  }
+  .dev-stages .stage__subtitle {
+    font-size: 14px;
+    line-height: 17.2px;
+  }
+}
